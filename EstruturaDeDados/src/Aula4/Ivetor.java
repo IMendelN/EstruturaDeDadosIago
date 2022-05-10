@@ -14,7 +14,7 @@ public class Ivetor implements IVetorI {
 			this.alunos[val] = aluno;
 			this.val++;
 		} else {
-			garanteEspaco(aluno);
+			remove(aluno);
 			System.out.println("!Vetor Cheio!");
 		}
 
