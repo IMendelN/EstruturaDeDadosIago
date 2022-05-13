@@ -1,4 +1,4 @@
-package Aula4;
+package Atividade4;
 
 public class Aluno {
 

@@ -1,4 +1,4 @@
-package Aula4;
+package Atividade3;
 
 public interface IVetorI {
 	public void adiciona(Aluno aluno);

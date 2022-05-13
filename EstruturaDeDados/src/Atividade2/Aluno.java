@@ -1,4 +1,4 @@
-package Aula3;
+package Atividade2;
 
 public class Aluno {
 		private String nome;

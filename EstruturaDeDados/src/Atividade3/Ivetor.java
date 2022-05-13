@@ -1,15 +1,15 @@
-package Aula5;
+package Atividade3;
 
-public class VetorGenerico {
+public class Ivetor implements IVetorI {
 
 	private int val = 0;
-	private Object alunos[];
+	private Aluno alunos[];
 
-	public VetorGenerico(int tam) {
-		this.alunos = new Object[tam];
+	public Ivetor(int tam) {
+		this.alunos = new Aluno[tam];
 	}
 
-	public void adiciona(Object aluno) {
+	public void adiciona(Aluno aluno) {
 		if (!cheio(aluno)) {
 			this.alunos[val] = aluno;
 			this.val++;
@@ -24,10 +24,10 @@ public class VetorGenerico {
 		return val;
 	}
 
-	public boolean contem(Object aluno) {
+	public boolean contem(Aluno aluno) {
 		for (int i = 0; i < val; i++) {
 			if (alunos[i] != null) {
-				if ((alunos[i]).equals(( aluno))) {
+				if (this.alunos[i].getNome().equals(aluno.getNome())) {
 					return true;
 
 				}
@@ -36,7 +36,7 @@ public class VetorGenerico {
 		return false;
 	}
 
-	public boolean cheio(Object aluno) {
+	public boolean cheio(Aluno aluno) {
 		if (val == alunos.length) {
 			return true;
 		}
@@ -44,9 +44,9 @@ public class VetorGenerico {
 		return false;
 	}
 
-	public boolean remove(Object aluno) {
+	public boolean remove(Aluno aluno) {
 		if (this.cheio(aluno)) {
-			Object newVet[] = new Object[this.alunos.length * 2];
+			Aluno newVet[] = new Aluno[this.alunos.length * 2];
 			for (int i = 0; i < this.alunos.length; i++) {
 				newVet[i] = this.alunos[i];
 
